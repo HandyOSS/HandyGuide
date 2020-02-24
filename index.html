@@ -1,6 +1,7 @@
 <html>
 <head>
-	<title>HandyMiner King Cobra - Quick Start Guide</title>
+<meta charset="UTF-8">  
+	<title>HandyMiner King Cobra - Guide de démarrage rapide </title>
 	<link rel="stylesheet" type="text/css" href="css/main.css" />
 	<script src="guideJS/jquery.min.js"></script>
 	<script src="guideJS/three.min.js"></script>
@@ -48,48 +49,49 @@
 <body>
 <div id="logo"></div>
 <div id="content">
-	<div id="header">HandyMiner King Cobra - Quick Start Guide</div>
+	<div id="header">HandyMiner King Cobra - Guide de démarrage rapide</div>
 	<div id="main">
 		<ul>
-			<li><a href="https://github.com/HandyMiner/HandyMiner-CLI/releases/download/KingCobra_0.0.3/HandyMiner_KingCobra_0.0.3.zip" target="_blank">Download HandyMiner Release ZIP</a> or <a href="https://github.com/HandyMiner/HandyMiner-CLI/releases/download/KingCobra_0.0.3/HandyMiner_KingCobra_0.0.3.tar.xz" target="_blank">Download HandyMiner Release Tarball</a></li>
+			<li><a href="https://github.com/HandyMiner/HandyMiner-CLI/releases/download/KingCobra_0.0.3/HandyMiner_KingCobra_0.0.3.zip" target="_blank">Telecharger HandyMiner Version ZIP</a> ou <a href="https://github.com/HandyMiner/HandyMiner-CLI/releases/download/KingCobra_0.0.3/HandyMiner_KingCobra_0.0.3.tar.xz" target="_blank">Telecharger HandyMiner Version Tarball</a></li>
 			<li>
-				<strong>Prerequisites:</strong>
+				<strong>Prérequis:</strong>
 				<ul>
-					<li>Install <a href="https://nodejs.org/en/download/" target="_blank">nodeJS</a></li>
-					<li>(windows only) Install <a href="https://git-scm.com/downloads" target="_blank">git bash</a> into Program Files/Git</li>
+					<li>Installer <a href="https://nodejs.org/en/download/" target="_blank">nodeJS</a></li>
+					<li>(windows uniquement) Installer <a href="https://git-scm.com/downloads" target="_blank">git bash</a> dans le répertoire Programmes/Git</li>
 				</ul>
 			</li>
 			<li>
-				<strong>Running:</strong>
+				<strong>Exécution:</strong>
 				<ul>
-					<li>Windows: double click &#039;dashboard.windows.bat&#039;</li>
-					<li>Linux: double click &#039;dashboard.sh&#039;</li>
-					<li>Mac: double click &#039;dashboard.mac.command&#039;</li>
-					<li>CLI: <input id="cliCommand" class="selectMe" value="npm start" readonly="readonly" size=9 /> or <input id="cliCommand" class="selectMe" value="./dashboard.sh" readonly="readonly" size=14 /> </li>
+					<li>Windows: double cliquer &#039;dashboard.windows.bat&#039;</li>
+					<li>Linux: double cliquer &#039;dashboard.sh&#039;</li>
+					<li>Mac: double cliquer &#039;dashboard.mac.command&#039;</li>
+					<li>CLI: <input id="cliCommand" class="selectMe" value="npm start" readonly="readonly" size=9 /> ou <input id="cliCommand" class="selectMe" value="./dashboard.sh" readonly="readonly" size=14 /> </li>
 				</ul>
 			</li>
 			<li>
-				<strong>Configuring:</strong> First run will start the configurator
+				<strong>Configuration:</strong> La première exécution demande la configuration matérielle
+ 
 				<ul>
-					<li>Select GPUs</li>
-					<li>Set a mode ( solo | pool )</li>
-					<li>Intensity: 11 for beast mode</li>
-					<li>Pool Difficulty: -1 for variable difficulty</li>
+					<li>Selectionner les GPUs</li>
+					<li>Choisir un mode ( solo | pool )</li>
+					<li>Intensité: 11 pour un mode optimale</li>
+					<li>Difficulté de la pool: -1 pour une difficulté variable</li>
 					<li>
-						<strong>Pool Hosts:</strong>
+						<strong>Hébergeurs de Pool:</strong>
 						<ul>
-							<li><strong>f2pool</strong> <input class="selectMe" value="hns.f2pool.com" readonly="readonly" size=14 /> port: <input class="selectMe" value="6000" readonly="readonly" size=4 /> <br />username: wallet.workerName <br /> password: anything</li>
-							<li><strong>6block</strong> <input class="selectMe" value="handshake.6block.com" readonly="readonly" size=21 /> port: <input class="selectMe" value="7701" readonly="readonly" size=4 /> <br />username: registeredMinerName <br /> password: anything</li>
-							<li><strong>PoolFlare</strong> <input class="selectMe" value="hns-us.ss.poolflare.com" readonly="readonly" size=24 /> port: <input class="selectMe" value="3355" readonly="readonly" size=4 /> <br />username: wallet.workerName <br /> password: anything</li>
-							<li><strong>hnspool</strong> <input class="selectMe" value="stratum-us.hnspool.com" readonly="readonly" size=23 /> port: <input class="selectMe" value="3001" readonly="readonly" size=4 /> <br />username: registeredUsername <br /> password: registeredUserPassword</li>
+							<li><strong>f2pool</strong> <input class="selectMe" value="hns.f2pool.com" readonly="readonly" size=14 /> port: <input class="selectMe" value="6000" readonly="readonly" size=4 /> <br />identifiant: adresse.NomduMineur <br /> mot de passe: au choix </li>
+							<li><strong>6block</strong> <input class="selectMe" value="handshake.6block.com" readonly="readonly" size=21 /> port: <input class="selectMe" value="7701" readonly="readonly" size=4 /> <br />identifiant: NomduMineurInscrit <br /> mot de passe: au choix</li>
+							<li><strong>PoolFlare</strong> <input class="selectMe" value="hns-us.ss.poolflare.com" readonly="readonly" size=24 /> port: <input class="selectMe" value="3355" readonly="readonly" size=4 /> <br />identifiant: adresse.NomduMineur <br /> mot de passe: au choix</li>
+							<li><strong>hnspool</strong> <input class="selectMe" value="stratum-us.hnspool.com" readonly="readonly" size=23 /> port: <input class="selectMe" value="3001" readonly="readonly" size=4 /> <br />identifiant: NomUtilisateurInscrit <br /> mot de passe: MotdePasseInscrit</li>
 						</ul>
 					</li>
 				</ul>
 			</li>
 			<li>
-				<strong>Wallets:</strong> 
+				<strong>Porte-monnaies:</strong> 
 				<ul>
-					<li><a href="https://github.com/kyokan/bob-wallet/releases" target="_blank">Bob Wallet</a> (GUI, Non-Custodial)</li>
+					<li><a href="https://github.com/kyokan/bob-wallet/releases" target="_blank">Bob Wallet</a> (Interface Graphique, contrôlé par l’utilisateur)</li>
 				</ul>
 			</li>
 		</ul>
@@ -98,7 +100,7 @@
 	<div class="donate">
 		<img src="logo/wallet.png" />
 		<div>
-			Donate: 
+			Donation: 
 			<input class="selectMe" id="donateInput" value="hs1qwfpd5ukdwdew7tn7vdgtk0luglgckp3klj44f8" readonly="readonly" size=44 />
 		</div>
 	</div>
