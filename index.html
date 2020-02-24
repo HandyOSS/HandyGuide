@@ -1,0 +1,99 @@
+<html>
+<head>
+	<title>HandyMiner King Cobra - Quick Start Guide</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css" />
+	<script src="guideJS/jquery.min.js"></script>
+	<script src="guideJS/three.min.js"></script>
+	<script type="shader/x-fragment" id="logoFragmentShader">
+		uniform float animate;
+		uniform float opacity;
+
+		void main() {
+		  gl_FragColor = vec4(vec3(0,0,0), opacity);
+		}
+	</script>
+	<script type="shader/x-vertex" id="logoVertexShader">
+		attribute vec3 direction;
+		attribute vec3 centroid;
+
+		uniform float animate;
+		uniform float opacity;
+		uniform float scale;
+
+		#define PI 3.14
+
+		void main() {
+		  // rotate the triangles
+		  // each half rotates the opposite direction
+		  float theta = (1.0 - animate) * (PI * 1.5) * sign(centroid.x);
+		  mat3 rotMat = mat3(
+		    vec3(cos(theta), 0.0, sin(theta)),
+		    vec3(0.0, 1.0, 0.0),
+		    vec3(-sin(theta), 0.0, cos(theta))
+		  );
+		  
+		  // push outward
+		  vec3 offset = mix(vec3(0.0), direction.xyz * rotMat, 1.0 - animate);
+		  
+		  // scale triangles to their centroids
+		  vec3 tPos = mix(centroid.xyz, position.xyz, scale) + offset;
+		  
+		  gl_Position = projectionMatrix *
+		              modelViewMatrix *
+		              vec4(tPos, 1.0);
+		}
+	</script>
+	<script src="guideJS/main.js"></script>
+</head>
+<body>
+<div id="logo"></div>
+<div id="content">
+	<div id="header">HandyMiner King Cobra - Quick Start Guide</div>
+	<div id="main">
+		<ul>
+			<li><a href="https://github.com/HandyMiner/HandyMiner-CLI/releases/download/KingCobra_0.0.3/HandyMiner_KingCobra_0.0.3.zip" target="_blank">Download HandyMiner Release ZIP</a> or <a href="https://github.com/HandyMiner/HandyMiner-CLI/releases/download/KingCobra_0.0.3/HandyMiner_KingCobra_0.0.3.tar.xz" target="_blank">Download HandyMiner Release Tarball</a></li>
+			<li>
+				<strong>Prerequisites:</strong>
+				<ul>
+					<li>Install <a href="https://nodejs.org/en/download/" target="_blank">nodeJS</a></li>
+					<li>(windows only) Install <a href="https://git-scm.com/downloads" target="_blank">git bash</a> into Program Files/Git</li>
+				</ul>
+			</li>
+			<li>
+				<strong>Running:</strong>
+				<ul>
+					<li>Windows: double click &#039;dashboard.windows.bat&#039;</li>
+					<li>Linux: double click &#039;dashboard.sh&#039;</li>
+					<li>Mac: double click &#039;dashboard.mac.command&#039;</li>
+					<li>CLI: <input id="cliCommand" class="selectMe" value="npm start" readonly="readonly" size=9 /> or <input id="cliCommand" class="selectMe" value="./dashboard.sh" readonly="readonly" size=14 /> </li>
+				</ul>
+			</li>
+			<li>
+				<strong>Configuring:</strong> First run will start the configurator
+				<ul>
+					<li>Select GPUs</li>
+					<li>Set a mode ( solo | pool )</li>
+					<li>Intensity: 11 for beast mode</li>
+					<li>Pool Difficulty: -1 for variable difficulty</li>
+					<li>
+						<strong>Pool Hosts:</strong>
+						<ul>
+							<li><strong>f2pool</strong> <input class="selectMe" value="hns.f2pool.com" readonly="readonly" size=14 /> port: <input class="selectMe" value="6000" readonly="readonly" size=4 /> <br />username: wallet.workerName <br /> password: anything</li>
+							<li><strong>6block</strong> <input class="selectMe" value="handshake.6block.com" readonly="readonly" size=21 /> port: <input class="selectMe" value="7701" readonly="readonly" size=4 /> <br />username: registeredMinerName <br /> password: anything</li>
+							<li><strong>PoolFlare</strong> <input class="selectMe" value="hns-us.ss.poolflare.com" readonly="readonly" size=24 /> port: <input class="selectMe" value="3355" readonly="readonly" size=4 /> <br />username: wallet.workerName <br /> password: anything</li>
+							<li><strong>hnspool</strong> <input class="selectMe" value="stratum-us.hnspool.com" readonly="readonly" size=23 /> port: <input class="selectMe" value="3001" readonly="readonly" size=4 /> <br />username: registeredUsername <br /> password: registeredUserPassword</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+		</ul>
+		
+	</div>
+</div>
+<div class="donate">
+	<img src="logo/wallet.png" />
+	<div>Donate: hs1qwfpd5ukdwdew7tn7vdgtk0luglgckp3klj44f8</div>
+</div>
+<div id="introLogo"></div>
+</body>
+</html>
