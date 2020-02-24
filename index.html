@@ -48,48 +48,48 @@
 <body>
 <div id="logo"></div>
 <div id="content">
-	<div id="header">HandyMiner King Cobra - Quick Start Guide</div>
+	<div id="header">HandyMiner King Cobra - Руководство пользователя</div>
 	<div id="main">
 		<ul>
-			<li><a href="https://github.com/HandyMiner/HandyMiner-CLI/releases/download/KingCobra_0.0.3/HandyMiner_KingCobra_0.0.3.zip" target="_blank">Download HandyMiner Release ZIP</a> or <a href="https://github.com/HandyMiner/HandyMiner-CLI/releases/download/KingCobra_0.0.3/HandyMiner_KingCobra_0.0.3.tar.xz" target="_blank">Download HandyMiner Release Tarball</a></li>
+			<li><a href="https://github.com/HandyMiner/HandyMiner-CLI/releases/download/KingCobra_0.0.3/HandyMiner_KingCobra_0.0.3.zip" target="_blank">Загрузка HandyMiner Релиз ZIP</a> или <a href="https://github.com/HandyMiner/HandyMiner-CLI/releases/download/KingCobra_0.0.3/HandyMiner_KingCobra_0.0.3.tar.xz" target="_blank">Загрузка HandyMiner Релиз Tarball</a></li>
 			<li>
-				<strong>Prerequisites:</strong>
+				<strong>Зависимости:</strong>
 				<ul>
-					<li>Install <a href="https://nodejs.org/en/download/" target="_blank">nodeJS</a></li>
-					<li>(windows only) Install <a href="https://git-scm.com/downloads" target="_blank">git bash</a> into Program Files/Git</li>
+					<li>Устанавливаем <a href="https://nodejs.org/en/download/" target="_blank">nodeJS</a></li>
+					<li>(Только для windows) Устанавливаем <a href="https://git-scm.com/downloads" target="_blank">git bash</a> в директорию Program Files/Git</li>
 				</ul>
 			</li>
 			<li>
-				<strong>Running:</strong>
+				<strong>Запуск:</strong>
 				<ul>
-					<li>Windows: double click &#039;dashboard.windows.bat&#039;</li>
-					<li>Linux: double click &#039;dashboard.sh&#039;</li>
-					<li>Mac: double click &#039;dashboard.mac.command&#039;</li>
-					<li>CLI: <input id="cliCommand" class="selectMe" value="npm start" readonly="readonly" size=9 /> or <input id="cliCommand" class="selectMe" value="./dashboard.sh" readonly="readonly" size=14 /> </li>
+					<li>Для Windows: Двойной щелчек по &#039;dashboard.windows.bat&#039;</li>
+					<li>Для Linux: Двойной щелчек по &#039;dashboard.sh&#039;</li>
+					<li>Для Mac: double click &#039;dashboard.mac.command&#039;</li>
+					<li>CLI запуск: <input id="cliCommand" class="selectMe" value="npm start" readonly="readonly" size=9 /> или <input id="cliCommand" class="selectMe" value="./dashboard.sh" readonly="readonly" size=14 /> </li>
 				</ul>
 			</li>
 			<li>
-				<strong>Configuring:</strong> First run will start the configurator
+				<strong>Конфигурация:</strong> Первый запуск майнера запросит конфигурацию оборудования
 				<ul>
-					<li>Select GPUs</li>
-					<li>Set a mode ( solo | pool )</li>
-					<li>Intensity: 11 for beast mode</li>
-					<li>Pool Difficulty: -1 for variable difficulty</li>
+					<li>Выберите видеоадаптеры GPUs</li>
+					<li>Установка режима соло либо пул ( solo | pool )</li>
+					<li>ИНтенсивность: 11 наилучший вариант</li>
+					<li>Сложность майнинга на пуле: -1 для переменной сложности</li>
 					<li>
-						<strong>Pool Hosts:</strong>
+						<strong>Адреса пулов:</strong>
 						<ul>
-							<li><strong>f2pool</strong> <input class="selectMe" value="hns.f2pool.com" readonly="readonly" size=14 /> port: <input class="selectMe" value="6000" readonly="readonly" size=4 /> <br />username: wallet.workerName <br /> password: anything</li>
-							<li><strong>6block</strong> <input class="selectMe" value="handshake.6block.com" readonly="readonly" size=21 /> port: <input class="selectMe" value="7701" readonly="readonly" size=4 /> <br />username: registeredMinerName <br /> password: anything</li>
-							<li><strong>PoolFlare</strong> <input class="selectMe" value="hns-us.ss.poolflare.com" readonly="readonly" size=24 /> port: <input class="selectMe" value="3355" readonly="readonly" size=4 /> <br />username: wallet.workerName <br /> password: anything</li>
-							<li><strong>hnspool</strong> <input class="selectMe" value="stratum-us.hnspool.com" readonly="readonly" size=23 /> port: <input class="selectMe" value="3001" readonly="readonly" size=4 /> <br />username: registeredUsername <br /> password: registeredUserPassword</li>
+							<li><strong>f2pool</strong> <input class="selectMe" value="hns.f2pool.com" readonly="readonly" size=14 /> порт: <input class="selectMe" value="6000" readonly="readonly" size=4 /> <br />Имя пользователя: Адрес.имяПользователя <br /> Пароль: любой</li>
+							<li><strong>6block</strong> <input class="selectMe" value="handshake.6block.com" readonly="readonly" size=21 /> порт: <input class="selectMe" value="7701" readonly="readonly" size=4 /> <br />Имя пользователя: зарегистрированноеИмяПользователя <br /> Пароль: любой</li>
+							<li><strong>PoolFlare</strong> <input class="selectMe" value="hns-us.ss.poolflare.com" readonly="readonly" size=24 /> порт: <input class="selectMe" value="3355" readonly="readonly" size=4 /> <br />Имя пользователя: Адрес.имяПользователя <br /> Пароль: любой</li>
+							<li><strong>hnspool</strong> <input class="selectMe" value="stratum-us.hnspool.com" readonly="readonly" size=23 /> порт: <input class="selectMe" value="3001" readonly="readonly" size=4 /> <br />Имя пользователя: зарегистрированноеИмяПользователя <br /> Пароль: Зарегистрированный пароль</li>
 						</ul>
 					</li>
 				</ul>
 			</li>
 			<li>
-				<strong>Wallets:</strong> 
+				<strong>Кошельки:</strong> 
 				<ul>
-					<li><a href="https://github.com/kyokan/bob-wallet/releases" target="_blank">Bob Wallet</a> (GUI, Non-Custodial)</li>
+					<li><a href="https://github.com/kyokan/bob-wallet/releases" target="_blank">Bob Wallet</a> (Графический интерфейс, децентрализованный)</li>
 				</ul>
 			</li>
 		</ul>
@@ -98,8 +98,8 @@
 	<div class="donate">
 		<img src="logo/wallet.png" />
 		<div>
-			Donate: 
-			<input class="selectMe" id="donateInput" value="hs1qwfpd5ukdwdew7tn7vdgtk0luglgckp3klj44f8" readonly="readonly" size=44 />
+			Пожертвование: 
+			<input class="selectMe" id="donateInput" value="hs1qvz9vp6x0dpk6y7n8hxav625neepv9wgl3992as" readonly="readonly" size=44 />
 		</div>
 	</div>
 </div>
