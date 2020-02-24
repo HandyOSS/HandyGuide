@@ -122,6 +122,8 @@ a{
   width: 70%;
   margin: 10px 15%;
   background: rgba(255,255,255,0.4);
+  z-index:1;
+  position:relative;
 }
 #main li{
   margin: 2px 0;
@@ -135,11 +137,16 @@ a{
   font-size: 14px;
   padding: 2px 5px;
 }
+#donateInput{
+  background:rgba(0,0,0,0) !important;
+  padding: 2px 0px;
+}
 .donate{
-  float:left;
+  float:right;
   position:absolute;
-  bottom: 0px;
-  left: 10px;
+  bottom: -30px;
+  right: 0px;
+  text-align:right;
 }
 .donate img{
   width:100px;
