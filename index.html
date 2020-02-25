@@ -1,5 +1,6 @@
 <html>
 <head>
+	<meta charset="UTF-8">
 	<title>HandyMiner King Cobra - Quick Start Guide</title>
 	<link rel="stylesheet" type="text/css" href="css/main.css" />
 	<script src="guideJS/jquery.min.js"></script>
@@ -47,11 +48,21 @@
 </head>
 <body>
 <div id="logo"></div>
+<div id="languageSelector">
+	<select id="language">
+		<option value="en">English</option>
+		<option value="fr">Français</option>
+		<option value="ru">Русский</option>
+		<option value="de">Deutsch</option>
+	</select>
+</div>
 <div id="content">
+	<!-- Update #header and #main content within the content_[language].html files. 
+		Below this: #header and #main is only here for SEO. They'll get overwritten by content_en.html on init -->
 	<div id="header">HandyMiner King Cobra - Quick Start Guide</div>
 	<div id="main">
 		<ul>
-			<li><a href="https://github.com/HandyMiner/HandyMiner-CLI/releases/download/KingCobra_0.0.3/HandyMiner_KingCobra_0.0.3.zip" target="_blank">Download HandyMiner Release ZIP</a> or <a href="https://github.com/HandyMiner/HandyMiner-CLI/releases/download/KingCobra_0.0.3/HandyMiner_KingCobra_0.0.3.tar.xz" target="_blank">Download HandyMiner Release Tarball</a></li>
+			<li><a id="downloadZIP" href="https://github.com/HandyMiner/HandyMiner-CLI/releases/download/KingCobra_0.0.3/HandyMiner_KingCobra_0.0.3.zip" target="_blank">Download HandyMiner Release ZIP</a> or <a id="downloadTAR" href="https://github.com/HandyMiner/HandyMiner-CLI/releases/download/KingCobra_0.0.3/HandyMiner_KingCobra_0.0.3.tar.xz" target="_blank">Download HandyMiner Release Tarball</a></li>
 			<li>
 				<strong>Prerequisites:</strong>
 				<ul>
@@ -65,7 +76,7 @@
 					<li>Windows: double click &#039;dashboard.windows.bat&#039;</li>
 					<li>Linux: double click &#039;dashboard.sh&#039;</li>
 					<li>Mac: double click &#039;dashboard.mac.command&#039;</li>
-					<li>CLI: <input id="cliCommand" class="selectMe" value="npm start" readonly="readonly" size=9 /> or <input id="cliCommand" class="selectMe" value="./dashboard.sh" readonly="readonly" size=14 /> </li>
+					<li>CLI: <input id="cliCommand" class="selectMe" value="npm start" readonly="readonly" size=9 /> or <input id="cliCommand2" class="selectMe" value="./dashboard.sh" readonly="readonly" size=15 /> </li>
 				</ul>
 			</li>
 			<li>
@@ -78,8 +89,8 @@
 					<li>
 						<strong>Pool Hosts:</strong>
 						<ul>
-							<li><strong>f2pool</strong> <input class="selectMe" value="hns.f2pool.com" readonly="readonly" size=14 /> port: <input class="selectMe" value="6000" readonly="readonly" size=4 /> <br />username: wallet.workerName <br /> password: anything</li>
-							<li><strong>6block</strong> <input class="selectMe" value="handshake.6block.com" readonly="readonly" size=21 /> port: <input class="selectMe" value="7701" readonly="readonly" size=4 /> <br />username: registeredMinerName <br /> password: anything</li>
+							<li><strong>f2pool</strong> <input class="selectMe" value="hns.f2pool.com" readonly="readonly" size=15 /> port: <input class="selectMe" value="6000" readonly="readonly" size=4 /> <br />username: wallet.workerName <br /> password: anything</li>
+							<li><strong>6block</strong> <input class="selectMe" value="stratum+tcp://handshake.6block.com" readonly="readonly" size=36 /> port: <input class="selectMe" value="7701" readonly="readonly" size=4 /> <br />username: registeredMinerName <br /> password: anything</li>
 							<li><strong>PoolFlare</strong> <input class="selectMe" value="hns-us.ss.poolflare.com" readonly="readonly" size=24 /> port: <input class="selectMe" value="3355" readonly="readonly" size=4 /> <br />username: wallet.workerName <br /> password: anything</li>
 							<li><strong>hnspool</strong> <input class="selectMe" value="stratum-us.hnspool.com" readonly="readonly" size=23 /> port: <input class="selectMe" value="3001" readonly="readonly" size=4 /> <br />username: registeredUsername <br /> password: registeredUserPassword</li>
 						</ul>
@@ -95,6 +106,7 @@
 		</ul>
 		
 	</div>
+	<!-- end update me in language specific files please -->
 	<div class="donate">
 		<img src="logo/wallet.png" />
 		<div>
