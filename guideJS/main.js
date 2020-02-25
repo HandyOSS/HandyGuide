@@ -15,11 +15,48 @@ $(document).ready(()=>{
 
 class HandyGuide{
 	constructor(){
+		//////CHANGEME WHEN MINER UPDATES HAPPEN
+		this.zipDownloadLink = 'https://github.com/HandyMiner/HandyMiner-CLI/releases/download/KingCobra_0.0.3/HandyMiner_KingCobra_0.0.3.zip';
+		this.tarDownloadLink = 'https://github.com/HandyMiner/HandyMiner-CLI/releases/download/KingCobra_0.0.3/HandyMiner_KingCobra_0.0.3.tar.xz';
+		//END CHANGEME
+
+		this.changeLanguages();
+		this.constructLinks();
 		this.initLogo();
 		setTimeout(()=>{
 			this.hideLoading();
 		},3000);
-		this.initEvents()
+		this.initEvents();
+		
+	}
+	changeLanguages(){
+		let langSelection = window.localStorage.getItem('language');
+		if(langSelection == null){
+			langSelection = 'en';
+		}
+		this.changeLanguage(langSelection);
+		$('#language').on('change',()=>{
+			let val = $('#language option:selected').val();
+			window.localStorage.setItem('language',val);
+			this.changeLanguage(val);
+		});
+	}
+	changeLanguage(language){
+		$('#language option').removeAttr('selected');
+		$('#language option[value="'+language+'"]').attr('selected','selected');
+		let langContents = './content_'+language+'.html';
+		$.get(langContents,(d)=>{
+			$('#main').remove();
+			$('#header').remove();
+			$('#content').prepend($(d));
+			this.constructLinks();
+		});
+	}
+	constructLinks(){
+		let zipLink = this.zipDownloadLink;
+		let tarLink = this.tarDownloadLink;
+		$('#downloadZIP').attr('href',zipLink);
+		$('#downloadTAR').attr('href',tarLink);
 	}
 	initEvents(){
 
