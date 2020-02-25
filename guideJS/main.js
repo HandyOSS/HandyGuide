@@ -50,6 +50,7 @@ class HandyGuide{
 			$('#header').remove();
 			$('#content').prepend($(d));
 			this.constructLinks();
+			this.initEvents();
 		});
 	}
 	constructLinks(){
