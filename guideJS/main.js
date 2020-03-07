@@ -16,8 +16,8 @@ $(document).ready(()=>{
 class HandyGuide{
 	constructor(){
 		//////CHANGEME WHEN MINER UPDATES HAPPEN
-		this.zipDownloadLink = 'https://github.com/HandyMiner/HandyMiner-CLI/releases/download/KingCobra_0.0.3/HandyMiner_KingCobra_0.0.3.zip';
-		this.tarDownloadLink = 'https://github.com/HandyMiner/HandyMiner-CLI/releases/download/KingCobra_0.0.3/HandyMiner_KingCobra_0.0.3.tar.xz';
+		this.zipDownloadLink = 'https://github.com/HandyMiner/HandyMiner-CLI/releases/download/0.0.4/HandyMiner_HangryMode_0.0.4_Release.zip';
+		this.tarDownloadLink = 'https://github.com/HandyMiner/HandyMiner-CLI/releases/download/0.0.4/HandyMiner_HangryMode_0.0.4_Release.tar.xz';
 		//END CHANGEME
 
 		this.changeLanguages();
